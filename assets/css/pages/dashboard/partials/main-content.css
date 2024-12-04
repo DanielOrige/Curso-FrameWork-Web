@@ -1,0 +1,128 @@
+.bg-main {
+  background-color: var(--main-bg-roxo);
+  padding: 1rem;
+  width: 100%;
+}
+
+.main-content {
+  background-color: var(--branco);
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.container-bem-vindo-txt h1 {
+  font-family: fontBold;
+  font-size: 20px;
+}
+
+.container-bem-vindo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-operacoes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.btn-add-compra,
+.btn-add-venda {
+  font-size: 16px;
+  font-family: fontBold;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: solid 1px var(--roxo-modal);
+  border-radius: 12px;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+
+.btn-add-compra {
+  color: var(--branco);
+  background-color: var(--roxo-modal);
+}
+
+.btn-add-compra:hover {
+  background-color: transparent;
+  color: var(--roxo-modal);
+}
+
+.btn-add-compra:hover .entrada {
+  fill: var(--roxo-modal);
+}
+
+.btn-add-venda {
+  color: var(--roxo-modal);
+  background-color: transparent;
+}
+
+.btn-add-venda:hover {
+  color: var(--branco);
+  background-color: var(--roxo-modal);
+}
+
+.btn-add-venda:hover .saida {
+  fill: var(--branco);
+}
+
+.popup-compra,
+.popup-venda {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--branco);
+  background-color: var(--roxo-modal);
+}
+
+.popup-compra .popup-titulo-compra,
+.popup-venda .popup-titulo-venda {
+  font-size: 24px;
+  font-family: fontBold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input, select {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  font-size: 16px;
+  color: var(--branco);
+  background-color: transparent;
+  border: solid 1px var(--branco);
+  border-radius: 12px;
+  padding: 8px;
+  outline: none;
+}
+
+.btn-forms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.btn-cancelar-form,
+.btn-confirm-form {
+  font-size: 16px;
+  font-family: fontBold;
+  background-color: transparent;
+  color: var(--branco);
+  cursor: pointer;
+}

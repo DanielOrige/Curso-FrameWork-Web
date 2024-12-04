@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/pages/dashboard/dashboard.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar-menu">
+      <a href="#" class="container-logo">
+        <img src="/assets/imgs/logo.svg" alt="Logo do sistema" />
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="selected">
+            <box-icon name="home"></box-icon>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="">
+            <box-icon name="chip"></box-icon>
+            <span class="nav-text">Projetos</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="">
+            <box-icon name="cog"></box-icon>
+            <span class="nav-text">Configurações</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="logout">
+        <li>
+          <div class="container-user">
+            <div class="user-img">
+              <img src="/assets/imgs/user-img.png" alt="Imagem do usuário" />
+            </div>
+            <div class="user-content">
+              <p class="user-name">Daniel Orige</p>
+              <p class="user-email">danielorige51@gmail.com</p>
+            </div>
+            <a href="/login.html">
+              <box-icon name="log-out"></box-icon>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <main class="bg-main">
+      <section class="main-content">
+        <div class="container-bem-vindo">
+          <div class="container-bem-vindo-txt">
+            <h1>Bem Vindo, Daniel Orige</h1>
+          </div>
+          <div class="container-operacoes">
+            <div class="box-btn-adicionar-compra">
+              <button class="btn-add-compra" id="openModalCompra">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                  class="entrada"
+                >
+                  <path
+                    d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429 0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4zm-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399zm8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4z"
+                  ></path>
+                </svg>
+                <span>Entrada</span>
+              </button>
+            </div>
+            <div class="box-btn-adicionar-venda">
+              <button class="btn-add-venda" id="openModalVenda">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#660095"
+                  class="saida"
+                >
+                  <path
+                    d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"
+                  ></path>
+                  <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </svg>
+                <span>Saida</span>
+              </button>
+            </div>
+            <div id="modalCompra" class="modal">
+              <div class="popup-compra">
+                <div class="popup-titulo-compra">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    class="entrada"
+                  >
+                    <path
+                      d="M15.999 8.5h2c0-2.837-2.755-4.131-5-4.429V2h-2v2.071c-2.245.298-5 1.592-5 4.429 0 2.706 2.666 4.113 5 4.43v4.97c-1.448-.251-3-1.024-3-2.4h-2c0 2.589 2.425 4.119 5 4.436V22h2v-2.07c2.245-.298 5-1.593 5-4.43s-2.755-4.131-5-4.429V6.1c1.33.239 3 .941 3 2.4zm-8 0c0-1.459 1.67-2.161 3-2.4v4.799c-1.371-.253-3-1.002-3-2.399zm8 7c0 1.459-1.67 2.161-3 2.4v-4.8c1.33.239 3 .941 3 2.4z"
+                    ></path>
+                  </svg>
+                  <span>Entrada</span>
+                </div>
+                <form id="formCompra">
+                  <label for="nome_acao">Nome da entrada</label>
+                  <input type="text" id="nome_acao" name="nome_acao" required />
+
+                  <label for="valor_acao">Valor</label>
+                  <input
+                    type="number"
+                    id="valor_acao"
+                    step="0.01"
+                    placeholder="Ex: 4.50"
+                    name="valor_acao"
+                    required
+                  />
+
+                  <label for="categoria_acao">Categoria</label>
+                  <input
+                    type="text"
+                    id="categoria_acao"
+                    name="categoria_acao"
+                    required
+                  />
+
+                  <div class="btn-forms">
+                    <button
+                      class="btn-cancelar-form"
+                      type="reset"
+                      id="closeModalBtnCompra"
+                    >
+                      Cancelar
+                    </button>
+                    <button class="btn-confirm-form" type="submit">
+                      Finalizar
+                    </button>
+                  </div>
+                </form>
+                <div id="modalVenda" class="modal">
+                  <div class="popup-venda">
+                    <div class="popup-titulo-venda">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                        class="saida"
+                      >
+                        <path
+                          d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"
+                        ></path>
+                        <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                      </svg>
+                      <span>Saida</span>
+                    </div>
+                    <form id="formVenda">
+                      <label for="nome_saida">Nome da saída</label>
+                      <input
+                        type="text"
+                        id="nome_saida"
+                        name="nome_saida"
+                        required
+                      />
+
+                      <label for="valor_saida">Valor</label>
+                      <input
+                        type="number"
+                        id="valor_saida"
+                        step="0.01"
+                        placeholder="Ex: 4.50"
+                        name="valor_saida"
+                        required
+                      />
+
+                      <label for="categoria_saida">Categoria</label>
+                      <input
+                        type="text"
+                        id="categoria_saida"
+                        name="categoria_saida"
+                        required
+                      />
+
+                      <label for="quantidade_saida"
+                        >Quantidade de parcelas</label
+                      >
+                      <input
+                        type="number"
+                        id="quantidade_saida"
+                        step="1"
+                        placeholder="Ex: 3"
+                        name="quantidade_saida"
+                        required
+                      />
+                      <div class="btn-forms">
+                        <button
+                          class="btn-cancelar-form"
+                          type="reset"
+                          id="closeModalBtnVenda"
+                        >
+                          Cancelar
+                        </button>
+                        <button class="btn-confirm-form" type="submit">
+                          Finalizar
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

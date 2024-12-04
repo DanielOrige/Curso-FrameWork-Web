@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="/assets/css/pages/login.css" />
+  </head>
+  <body>
+    <section class="login-container">
+      <div class="login-card">
+        <div class="icon">
+          <img src="/assets/imgs/log-in.svg" alt="login-icon" />
+        </div>
+        <h1>Cadastre-se</h1>
+        <p>
+          Realize seu cadastro para começar a ter controle sobre suas finanças e
+          objetivos
+        </p>
+        <form>
+          <div class="input-fild">
+            <input type="email" placeholder="Seu melhor e-mail" required />
+          </div>
+          <div class="input-fild">
+            <input
+              type="password"
+              id="password"
+              placeholder="Insira uma senha"
+              required
+            />
+            <img
+              src="/assets/imgs/eye-off.svg"
+              alt="mostrar senha"
+              id="togglePassword"
+            />
+          </div>
+          <div class="input-fild">
+            <input
+              type="password"
+              id="password"
+              placeholder="Repita a senha"
+              required
+            />
+            <img
+              src="/assets/imgs/eye-off.svg"
+              alt="mostrar senha"
+              id="togglePassword"
+            />
+          </div>
+          <button type="submit">Cadastrar-se</button>
+        </form>
+        <p class="texto-registro">
+          Já possui uma conta ? <a href="/login.html">Faça o login</a>
+        </p>
+      </div>
+    </section>
+    <script src="/assets/js/olho-magico.js"></script>
+  </body>
+</html>
