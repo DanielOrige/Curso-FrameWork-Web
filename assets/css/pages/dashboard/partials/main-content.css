@@ -11,9 +11,10 @@
   height: 100%;
   width: 100%;
   overflow-x: scroll;
-  &::-webkit-scrollbar{
-    display: none;
-  } /*Aqui ele apresenta como se estive com erro, mas o site fica funcional, acredito que não tenha problema*/
+}
+
+.main-content::-webkit-scrollbar {
+  display: none;
 }
 
 .container-bem-vindo-txt h1 {
