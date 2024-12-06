@@ -10,6 +10,10 @@
   padding: 2rem;
   height: 100%;
   width: 100%;
+  overflow-x: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+  } /*Aqui ele apresenta como se estive com erro, mas o site fica funcional, acredito que não tenha problema*/
 }
 
 .container-bem-vindo-txt h1 {
@@ -97,7 +101,13 @@
   gap: 0.5rem;
 }
 
-input, select {
+#formCompra,
+#formVenda {
+  font-family: fontRegular;
+}
+
+input,
+select {
   width: 100%;
   height: 40px;
   margin: 10px 0;
@@ -125,4 +135,120 @@ input, select {
   background-color: transparent;
   color: var(--branco);
   cursor: pointer;
+}
+
+.modal {
+  display: none;
+  place-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.box-grafico-principal {
+  display: inline-block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: var(--branco);
+  width: 100%;
+  height: 60%;
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 1px rgba(2, 79, 82, 0.2);
+}
+
+.box-grafico-principal .grafico {
+  background-color: var(--main-bg-roxo);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.grafico .titulo-grafico {
+  font-family: fontBold;
+  background-color: var(--roxo-modal);
+  text-align: center;
+  color: var(--branco);
+  width: fit-content;
+  padding: 0.5rem 4rem;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.grafico #grafico-principal {
+  width: 100%;
+  height: 90%;
+}
+
+.box-estatisticas {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: calc(50% - 1rem);
+}
+
+.box-estatisticas .estatistica {
+  background-color: var(--main-bg-roxo);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 1px rgba(2, 79, 82, 0.2);
+  font-size: 16px;
+}
+
+.estatistica h4 {
+  font-family: fontBold;
+}
+
+.estatistica p {
+  font-family: fontRegular;
+}
+
+.box-noticias {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: calc(50% - 1rem);
+  float: right;
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 16px;
+  color: var(--preto);
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 1px rgba(2, 79, 82, 0.2);
+}
+
+.box-noticias h2 {
+  font-family: fontBold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.box-noticias .noticias {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--main-bg-roxo);
+}
+
+.noticias h4 {
+  font-family: fontBold;
+  text-transform: uppercase;
+}
+
+.noticias a {
+  color: var(--preto);
+  font-family: fontRegular;
+}
+
+.noticias p {
+  color: var(--preto);
+  font-family: fontRegular;
+  font-size: 12px;
 }

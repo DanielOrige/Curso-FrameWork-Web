@@ -144,83 +144,145 @@
                     </button>
                   </div>
                 </form>
-                <div id="modalVenda" class="modal">
-                  <div class="popup-venda">
-                    <div class="popup-titulo-venda">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        class="saida"
-                      >
-                        <path
-                          d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"
-                        ></path>
-                        <circle cx="10.5" cy="19.5" r="1.5"></circle>
-                        <circle cx="17.5" cy="19.5" r="1.5"></circle>
-                      </svg>
-                      <span>Saida</span>
-                    </div>
-                    <form id="formVenda">
-                      <label for="nome_saida">Nome da saída</label>
-                      <input
-                        type="text"
-                        id="nome_saida"
-                        name="nome_saida"
-                        required
-                      />
-
-                      <label for="valor_saida">Valor</label>
-                      <input
-                        type="number"
-                        id="valor_saida"
-                        step="0.01"
-                        placeholder="Ex: 4.50"
-                        name="valor_saida"
-                        required
-                      />
-
-                      <label for="categoria_saida">Categoria</label>
-                      <input
-                        type="text"
-                        id="categoria_saida"
-                        name="categoria_saida"
-                        required
-                      />
-
-                      <label for="quantidade_saida"
-                        >Quantidade de parcelas</label
-                      >
-                      <input
-                        type="number"
-                        id="quantidade_saida"
-                        step="1"
-                        placeholder="Ex: 3"
-                        name="quantidade_saida"
-                        required
-                      />
-                      <div class="btn-forms">
-                        <button
-                          class="btn-cancelar-form"
-                          type="reset"
-                          id="closeModalBtnVenda"
-                        >
-                          Cancelar
-                        </button>
-                        <button class="btn-confirm-form" type="submit">
-                          Finalizar
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+              </div>
+            </div>
+            <div id="modalVenda" class="modal">
+              <div class="popup-venda">
+                <div class="popup-titulo-venda">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    class="saida"
+                  >
+                    <path
+                      d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"
+                    ></path>
+                    <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                    <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                  </svg>
+                  <span>Saida</span>
                 </div>
+                <form id="formVenda">
+                  <label for="nome_saida">Nome da saída</label>
+                  <input
+                    type="text"
+                    id="nome_saida"
+                    name="nome_saida"
+                    required
+                  />
+
+                  <label for="valor_saida">Valor</label>
+                  <input
+                    type="number"
+                    id="valor_saida"
+                    step="0.01"
+                    placeholder="Ex: 4.50"
+                    name="valor_saida"
+                    required
+                  />
+
+                  <label for="categoria_saida">Categoria</label>
+                  <input
+                    type="text"
+                    id="categoria_saida"
+                    name="categoria_saida"
+                    required
+                  />
+
+                  <label for="quantidade_saida">Quantidade de parcelas</label>
+                  <input
+                    type="number"
+                    id="quantidade_saida"
+                    step="1"
+                    placeholder="Ex: 3"
+                    name="quantidade_saida"
+                    required
+                  />
+                  <div class="btn-forms">
+                    <button
+                      class="btn-cancelar-form"
+                      type="reset"
+                      id="closeModalBtnVenda"
+                    >
+                      Cancelar
+                    </button>
+                    <button class="btn-confirm-form" type="submit">
+                      Finalizar
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
+        <div class="box-grafico-principal">
+          <div class="grafico">
+            <div class="titulo-grafico">
+              <h3>Entradas e Saídas</h3>
+            </div>
+            <div id="grafico-principal"></div>
+          </div>
+        </div>
+        <div class="box-estatisticas">
+          <div class="estatistica">
+            <h4>Projeto: Viagem</h4>
+            <p>70%</p>
+          </div>
+          <div class="estatistica">
+            <h4>Projeto: PC Gamer</h4>
+            <p>90%</p>
+          </div>
+          <div class="estatistica">
+            <h4>Projeto: Moto</h4>
+            <p>40%</p>
+          </div>
+          <div class="estatistica">
+            <h4>Projeto: Casa Própria</h4>
+            <p>10%</p>
+          </div>
+        </div>
+        <div class="box-noticias">
+          <h2>Principais Dicas</h2>
+
+          <div class="noticias">
+            <h4>Entradas e saídas</h4>
+            <a href="#" target="_blank">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur, sit ipsam neque doloremque laborum natus esse
+                delectus ullam necessitatibus sapiente, quidem nisi corporis
+                fuga reprehenderit quos fugit dignissimos repellendus nam.
+              </p>
+            </a>
+          </div>
+          <div class="noticias">
+            <h4>Projetos</h4>
+            <a href="#" target="_blank">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur, sit ipsam neque doloremque laborum natus esse
+                delectus ullam necessitatibus sapiente, quidem nisi corporis
+                fuga reprehenderit quos fugit dignissimos repellendus nam.
+              </p>
+            </a>
+          </div>
+          <div class="noticias">
+            <h4>Investimentos</h4>
+            <a href="#" target="_blank">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur, sit ipsam neque doloremque laborum natus esse
+                delectus ullam necessitatibus sapiente, quidem nisi corporis
+                fuga reprehenderit quos fugit dignissimos repellendus nam.
+              </p>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="/assets/js/popup.js"></script>
   </body>
 </html>
